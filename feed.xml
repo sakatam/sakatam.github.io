@@ -30,5 +30,35 @@ layout: null
         {% endfor %}
       </item>
     {% endfor %}
+
+    {% for i in (1..10) %}
+      <item>
+        <title>sample article {{ i }}</title>
+        <author>{{ site.default_author | xml_escape }}</author>
+        <description>description {{ i }}</description>
+        <pubDate>Wed, 18 May 2016 16:06:33 +0000</pubDate>
+        <link>{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}</link>
+        <guid isPermaLink="true">{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}</guid>
+        <content:encoded>
+          <![CDATA[
+          <!doctype html>
+          <html lang="en" prefix="op: http://media.facebook.com/op#">
+          <head>
+            <meta charset="utf-8">
+            <link rel="canonical" href="{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}">
+            <meta property="op:markup_version" content="v1.0">
+          </head>
+          <body>
+            <article>
+              <h1>test article {{i}}<h1>
+              <p>this is test article {{i}}<p>
+            </article>
+          </body>
+          </html>
+          ]]>
+        </content:encoded>
+        <category>random</category>
+      </item>
+    {% endfor %}
   </channel>
 </rss>
