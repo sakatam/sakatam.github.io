@@ -59,12 +59,14 @@ layout: null
               </header>
 
               <h1>article h1: test article {{i}}<h1>
-              <p>this is test article {{i}}<p>
+              <p>this is test article {{i}}</p>
 
               <figure>
                 <img src="{{ site.url }}/assets/rss/img2.jpg" />
                 <figcaption>article figure: This ramen is also amazing</figcaption>
               </figure>
+
+              <footer>this is footer</footer>
             </article>
           </body>
           </html>
