@@ -49,14 +49,15 @@ layout: null
             <meta property="op:markup_version" content="v1.0">
           </head>
           <body>
-            <header>
-              <h1>header h1: test article {{i}}<h1>
-              <figure>
-                <img src="{{ site.url }}/assets/rss/img1.jpg" />
-                <figcaption>header figure: This ramen is amazing</figcaption>
-              </figure>
-            </header>
             <article>
+              <header>
+                <h1>article header h1: test article {{i}}<h1>
+                <figure>
+                  <img src="{{ site.url }}/assets/rss/img1.jpg" />
+                  <figcaption>article header figure: This ramen is amazing</figcaption>
+                </figure>
+              </header>
+
               <h1>article h1: test article {{i}}<h1>
               <p>this is test article {{i}}<p>
 
