@@ -36,7 +36,7 @@ layout: null
         <title>sample article {{ i }}</title>
         <author>{{ site.default_author | xml_escape }}</author>
         <description>description {{ i }}</description>
-        <pubDate>Wed, 18 May 2016 16:06:33 +0000</pubDate>
+        <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
         <link>{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}</guid>
         <content:encoded>
