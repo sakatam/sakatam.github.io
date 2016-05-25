@@ -50,18 +50,19 @@ layout: null
           </head>
           <body>
             <header>
+              <h1>header h1: test article {{i}}<h1>
               <figure>
-                <img src="https://lh3.googleusercontent.com/UVeBroF9KHgcYSnv15saXc5lHV13Rf_m1NIzSKp4U7w6qdtthKzfw99bjPQfH76KivqpzCSHb2G7cw=w947-h1262-no" />
-                <figcaption>This ramen is amazing</figcaption>
+                <img src="{{ site.url }}/assets/rss/img1.jpg" />
+                <figcaption>header figure: This ramen is amazing</figcaption>
               </figure>
             </header>
             <article>
-              <h1>test article {{i}}<h1>
+              <h1>article h1: test article {{i}}<h1>
               <p>this is test article {{i}}<p>
 
               <figure>
-                <img src="https://lh3.googleusercontent.com/UVeBroF9KHgcYSnv15saXc5lHV13Rf_m1NIzSKp4U7w6qdtthKzfw99bjPQfH76KivqpzCSHb2G7cw=w947-h1262-no" />
-                <figcaption>This ramen is also amazing</figcaption>
+                <img src="{{ site.url }}/assets/rss/img2.jpg" />
+                <figcaption>article figure: This ramen is also amazing</figcaption>
               </figure>
             </article>
           </body>
