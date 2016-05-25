@@ -51,7 +51,7 @@ layout: null
           <body>
             <article>
               <header>
-                <h1>article header h1: test article {{i}}<h1>
+                <h1>article header h1: test article {{i}}</h1>
                 <figure>
                   <img src="{{ site.url }}/assets/rss/img1.jpg" />
                   <figcaption>article header figure: This ramen is amazing</figcaption>
