@@ -34,7 +34,7 @@ layout: null
           <body>
             <article>
               <header>
-                <h1>feed#{{ num }} article header h1: test article {{i}}</h1>
+                <h1>feed#{{ num }} {{i}} {{ site.time | date_to_rfc822 }}</h1>
                 <figure>
                   <img src="{{ site.url }}/assets/rss/img1.jpg" />
                   <figcaption>article header figure: This ramen is amazing</figcaption>
