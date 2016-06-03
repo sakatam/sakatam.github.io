@@ -12,34 +12,36 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
 
+    {% assign num = 2 %}
     {% for i in (1..10) %}
+      {% capture url %}{{ site.baseurl }}{{ site.url }}/{{ num }}-{{ i }}-{{ site.time | date: "%s" }}{% endcapture %}
       <item>
         <title>sample article {{ i }}</title>
         <author>{{ site.default_author | xml_escape }}</author>
         <description>description {{ i }}</description>
         <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-        <link>{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}</guid>
+        <link>{{url}}</link>
+        <guid isPermaLink="true">{{url}}</guid>
         <content:encoded>
           <![CDATA[
           <!doctype html>
           <html lang="en" prefix="op: http://media.facebook.com/op#">
           <head>
             <meta charset="utf-8">
-            <link rel="canonical" href="{{ "/" | append:i | prepend: site.baseurl | prepend: site.url }}">
+            <link rel="canonical" href="{{url}}">
             <meta property="op:markup_version" content="v1.0">
           </head>
           <body>
             <article>
               <header>
-                <h1>feed#2 article header h1: test article {{i}}</h1>
+                <h1>feed#{{ num }} article header h1: test article {{i}}</h1>
                 <figure>
                   <img src="{{ site.url }}/assets/rss/img1.jpg" />
                   <figcaption>article header figure: This ramen is amazing</figcaption>
                 </figure>
               </header>
 
-              <h1>feed#2 article h1: test article {{i}}<h1>
+              <h1>feed#{{ num }} article h1: test article {{i}}<h1>
               <p>this is test article {{i}}</p>
 
               <figure>
