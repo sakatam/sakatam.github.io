@@ -14,7 +14,7 @@ layout: null
 
     {% assign num = 1 %}
     {% for i in (1..10) %}
-      {% capture url %}{{ site.baseurl }}{{ site.url }}/{{ num }}-{{ i }}-{{ site.time | date: "%s" }}{% endcapture %}
+      {% capture url %}{{ site.baseurl }}{{ site.url }}/{{ i }}?{{ num }}-{{ site.time | date: "%s" }}{% endcapture %}
       <item>
         <title>sample article {{ i }}</title>
         <author>{{ site.default_author | xml_escape }}</author>
